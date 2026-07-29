@@ -248,10 +248,20 @@
 
     <link rel="stylesheet" href="images/style.css">
 </head>
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصتنا الرقمية للمعلوماتية</title>
+    <!-- استدعاء خط "Cairo" لجعل النصوص عربية واحترافية -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- تعديل المسار ليرتبط بملف main.css المرفوع بجانبه مباشرة -->
+    <link rel="stylesheet" href="main.css">
+</head>
 <body>
 
-
+    <!-- شريط التنقل العلوي (Navbar) مرتبط بالأقسام بالأسفل -->
     <header class="navbar">
         <div class="logo">
             <span class="logo-icon">💻</span>
@@ -264,47 +274,38 @@
         </nav>
     </header>
 
-
+    <!-- القسم الأول: الواجهة الرئيسية بالخلفية الداكنة والنصوص البيضاء (بدون فيديو خلفي) -->
     <section id="about" class="hero-section">
-
-        <video autoplay muted loop playsinline preload="auto" class="video-background">
-            <source src="./starer/vedeo3.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-
-
         <div class="video-overlay"></div>
-
-
         <div class="hero-content">
             <h1>مرحباً بكم في منصتنا الرقمية</h1>
-            <p>نحن نقدم أفضل الحلول البرمجية والتصميمية المتكاملة لمساعدتك في بناء وتطوير مشروعك على الإنترنت بأحدث
-                التقنيات وبأعلى معايير الأمان والسرعة العالمية.</p>
+            <p>نحن نقدم أفضل الحلول البرمجية والتصميمية المتكاملة لمساعدتك في بناء وتطوير مشروعك على الإنترنت بأحدث التقنيات وبأعلى معايير الأمان والسرعة العالمية.</p>
             <a href="#data-section" class="cta-button">تصفح باقاتنا</a>
         </div>
     </section>
 
-
+    <!-- القسم الثاني: بيئة العمل (الفيديو المباشر وصورة البوستر المرفوعين بجانبه) -->
     <section id="video-section" class="section video-section">
         <div class="video-wrapper">
-            <video autoplay muted loop playsinline preload="auto">
-                <source src="./starer/vedeo3.mp4" type="video/mp4">
+            <!-- المسارات مباشرة وبدون أي مجلدات لتطابق حسابك على جيت هاب مية بالمية -->
+            <video autoplay muted loop playsinline preload="auto" poster="showing-cart.jpg">
+                <source src="vedeo3.mp4" type="video/mp4">
                 متصفحك لا يدعم تشغيل الفيديو.
             </video>
         </div>
     </section>
 
+    <!-- القسم الثالث: البيانات والخدمات والأسعار -->
     <section id="data-section" class="section data-section">
         <div class="data-container">
-
-
+            
+            <!-- العمود الأول: ملاحظات وتفاصيل حقيقية -->
             <div class="data-box notes-box">
                 <h3>تنويه وملاحظات</h3>
-                <p>جميع الباقات المطروحة تشمل الدعم الفني المتكامل وتحديثات برمجية مجانية مستمرة طوال فترة التعاقد وبدون
-                    أي تكاليف مخفية.</p>
+                <p>جميع الباقات المطروحة تشمل الدعم الفني المتكامل وتحديثات برمجية مجانية مستمرة طوال فترة التعاقد وبدون أي تكاليف مخفية.</p>
             </div>
-
-
+            
+            <!-- العمود الثاني: قائمة الميزات والخدمات النقطية -->
             <div class="data-box features-box">
                 <h3>مزايا خدماتنا الرقمية</h3>
                 <ul>
@@ -313,17 +314,17 @@
                     <li>استضافات سحابية سريعة جداً ومحمية بالكامل.</li>
                 </ul>
             </div>
-
-
+            
+            <!-- العمود الثالث: جدول تقسيم الأسعار الحقيقي -->
             <div class="data-box table-box">
                 <h3>خطط الأسعار والاشتراك</h3>
                 <div class="pricing-table">
                     <div class="table-header">الخدمة</div>
                     <div class="table-header">التكلفة</div>
-
+                    
                     <div class="table-cell">موقع تعريفي</div>
                     <div class="table-cell">$149 مرة واحدة</div>
-
+                    
                     <div class="table-cell">متجر إلكتروني</div>
                     <div class="table-cell">$399 مرة واحدة</div>
                 </div>
@@ -333,5 +334,5 @@
     </section>
 
 </body>
-
 </html>
+
