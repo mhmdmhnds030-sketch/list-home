@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصتنا الرقمية للمعلوماتية</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            font-size: 26px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .nav-links a {
+            margin-right: 25px;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+
+        .section {
+            padding: 80px 8%;
+        }
+
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.65);
+
+            z-index: 2;
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: 0 20px;
+            color: #ffffff;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 19px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            color: #f1f5f9;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content .cta-button {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 17px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .hero-content .cta-button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+
+        .video-section {
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .data-section {
+            background-color: #ffffff;
+        }
+
+        .data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .data-box {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 4px solid #2563eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .data-box h3 {
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        .features-box ul {
+            padding-right: 20px;
+            line-height: 2;
+            margin: 0;
+        }
+
+        .features-box li {
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+
+        .pricing-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .table-cell {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            border-left: 1px solid #e2e8f0;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: 14px;
+        }
+
+        .table-cell:last-child,
+        .table-cell:nth-last-child(2) {
+            border-bottom: none;
+        }
+    </style>
+
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <link rel="stylesheet" href="images/style.css">
+</head>
+
+<body>
+
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">💻</span>
+            <span class="logo-text">مهندس تيك</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#about">من نحن</a>
+            <a href="#video-section">بيئة العمل</a>
+            <a href="#data-section">الخدمات والأسعار</a>
+        </nav>
+    </header>
+
+
+    <section id="about" class="hero-section">
+
+        <video autoplay muted loop playsinline preload="auto" class="video-background">
+            <source src="https://pexels.com" type="video/mp4">
+            <source src="images/vedeo2.mp4" type="video/mp4">
+            <source src="vedeo2.mp4" type="video/mp4">
+
+        </video>
+
+
+        <div class="video-overlay"></div>
+
+
+        <div class="hero-content">
+            <h1>مرحباً بكم في منصتنا الرقمية</h1>
+            <p>نحن نقدم أفضل الحلول البرمجية والتصميمية المتكاملة لمساعدتك في بناء وتطوير مشروعك على الإنترنت بأحدث
+                التقنيات وبأعلى معايير الأمان والسرعة العالمية.</p>
+            <a href="#data-section" class="cta-button">تصفح باقاتنا</a>
+        </div>
+    </section>
+
+
+    <section id="video-section" class="section video-section">
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline preload="auto">
+                <source src="./starer/vedeo3.mp4" type="video/mp4">
+
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    </section>
+
+
+    <section id="data-section" class="section data-section">
+        <div class="data-container">
+
+
+            <div class="data-box notes-box">
+                <h3>تنويه وملاحظات</h3>
+                <p>جميع الباقات المطروحة تشمل الدعم الفني المتكامل وتحديثات برمجية مجانية مستمرة طوال فترة التعاقد وبدون
+                    أي تكاليف مخفية.</p>
+            </div>
+
+
+            <div class="data-box features-box">
+                <h3>مزايا خدماتنا الرقمية</h3>
+                <ul>
+                    <li>تصاميم عصرية متجاوبة مع الهواتف الذكية.</li>
+                    <li>لوحات تحكم برمجية مرنة وسهلة الاستخدام.</li>
+                    <li>استضافات سحابية سريعة جداً ومحمية بالكامل.</li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: جدول تقسيم الأسعار الحقيقي -->
+            <div class="data-box table-box">
+                <h3>خطط الأسعار والاشتراك</h3>
+                <div class="pricing-table">
+                    <div class="table-header">الخدمة</div>
+                    <div class="table-header">التكلفة</div>
+
+                    <div class="table-cell">موقع تعريفي</div>
+                    <div class="table-cell">$149 مرة واحدة</div>
+
+                    <div class="table-cell">متجر إلكتروني</div>
+                    <div class="table-cell">$399 مرة واحدة</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
